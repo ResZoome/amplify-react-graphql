@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Amplify } from 'aws-amplify';
 import config from './aws-exports';
+import NavBarHeader2 from '/home/ec2-user/environment/amplifyapp/src/ui-components/index.js'
 Amplify.configure(config);
 
 

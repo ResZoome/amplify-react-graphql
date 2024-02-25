@@ -23,12 +23,14 @@ import {
 import {Amplify} from 'aws-amplify';
 import awsExports from './aws-exports'; // The path may vary
 import { generateClient } from 'aws-amplify/api';
+import {NavBarHeader2, ProductDetail, HeroLayout1} from '/home/ec2-user/environment/amplifyapp/src/ui-components/index.js'
 
 Amplify.configure(awsExports);
 
 const client = generateClient();
 
 const App = ({ signOut }) => {
+  
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
@@ -79,7 +81,13 @@ const App = ({ signOut }) => {
 
   return (
     <View className="App">
-      <Heading level={1}>My Notes App</Heading>
+      <div>
+        <NavBarHeader2 />
+      </div>
+      <div>
+        <HeroLayout1 />
+      </div>
+      
       <View as="form" margin="3rem 0" onSubmit={createNote}>
     	<Flex direction="row" justifyContent="center">
           <TextField
